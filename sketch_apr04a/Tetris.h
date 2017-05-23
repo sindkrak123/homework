@@ -16,9 +16,9 @@ Stone currentStone;
 void Te_Init()
 {
   currentStone = St_InitStone();
-  pinMode(BUTTON_LEFT, INPUT);
-  pinMode(BUTTON_RIGHT, INPUT);
-  pinMode(BUTTON_ROT, INPUT);
+  pinMode(BUTTON_LEFT, INPUT_PULLUP);
+  pinMode(BUTTON_RIGHT, INPUT_PULLUP);
+  pinMode(BUTTON_ROT, INPUT_PULLUP);
 }
 
 void Te_Draw()
