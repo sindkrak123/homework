@@ -1,0 +1,19 @@
+//  피에조부저 테스트하기 
+int piezo = 3;          // 피에조 부저 톤 조절을 위해 3번 핀 사용
+int del = 1000;         // del이라는 변수에 숫자 1000을 저장
+
+void setup()             // 어떤 디지털 핀을 사용할지 설정
+{                
+  pinMode(piezo, OUTPUT);     // 피에조 부저 제어를 위한 3번 디지털 핀 사용
+}
+
+//피에조 부저에서 소리를 내게 하자
+void loop() 
+{
+  analogWrite(piezo, 64);           // PWM 25% 적용
+  delay(del);                       // 1초 대기
+  analogWrite(piezo, 128);          // PWM 50% 적용
+  delay(del);                       // 1초 대기
+ analogWrite(piezo, 256);           // PWM 100% 적용
+  delay(del);                       // 1초 대기
+}
